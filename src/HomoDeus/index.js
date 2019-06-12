@@ -23,6 +23,15 @@ export default class HomoDeus extends Component {
               <Quote
                 quote={{
                   en: {
+                    content: `History has witnessed the rise and fall of many religions, empires, and cultures. Such upheavals are not necessarily bad.`,
+                    local: { p: 77, r: 31 }
+                  }
+                }}
+                mainLang={mainLang}
+              />
+              <Quote
+                quote={{
+                  en: {
                     content: `Looking back, many think that the downfall of the pharaohs and the death of God were both positive developments. Maybe the collapse of humanism will also be beneficial. People are usually afraid of change because they fear the unknown. But the single greatest constant of history is that everything changes.`,
                     local: { p: 78, r: 15 }
                   }
