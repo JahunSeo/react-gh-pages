@@ -3,6 +3,22 @@ import "./index.scss";
 
 import Quote from "./Quote";
 
+const NavItem = props => {
+  let { item } = props;
+  return (
+    <li className="NavItem">
+      {item.title && <a className="NavItem__a">{item.title}</a>}
+      {item.sub && (
+        <ul className="NavList">
+          {item.sub.map((subItem, index) => {
+            return <NavItem item={subItem} key={index} />;
+          })}
+        </ul>
+      )}
+    </li>
+  );
+};
+
 export default class HomoDeus extends Component {
   state = {
     mainLang: "en"
@@ -11,10 +27,66 @@ export default class HomoDeus extends Component {
   render() {
     let { mainLang } = this.state;
 
+    let navArray = [
+      {
+        title: "HomoDeus",
+        sub: [
+          {
+            title: null,
+            sub: [
+              {
+                title: "Ch1. The New Human Agenda",
+                sub: [{ title: "A Gun in Act 1" }]
+              }
+            ]
+          },
+          {
+            title: "PART 1",
+            sub: [
+              {
+                title: "ch2",
+                sub: []
+              }
+            ]
+          }
+        ]
+      }
+    ];
+
     return (
       <div className="Page--HomoDeus">
         <div className="Page__inner">
-          <section className="section section--nav">nav</section>
+          <section className="section section--nav">
+            <nav className="Nav">
+              <ul className="NavList">
+                {navArray.map((item, index) => {
+                  return <NavItem key={index} item={item} />;
+                })}
+              </ul>
+
+              <ul className="NavList">
+                <li className="NavItem">
+                  <a className="NavItem__a">HomoDeus</a>
+                  <ul className="NavList">
+                    <li className="NavItem">
+                      <ul className="NavList">
+                        <li className="NavItem">
+                          <a className="NavItem__a">
+                            Ch1. The New Human Agenda
+                          </a>
+                          <ul className="NavList">
+                            <li className="NavItem">
+                              <a className="NavItem__a">A Gun in Act 1</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </section>
           <section className="section section--main">
             <div className="Main">
               <h1 className="Main__h1">HomoDeus</h1>
