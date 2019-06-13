@@ -109,6 +109,39 @@ export default class HomoDeus extends Component {
                 }}
                 mainLang={mainLang}
               />
+              <h3 className="Main__h3" id={generateID("Ch3. The Human Spark")}>
+                Ch3. The Human Spark
+              </h3>
+              <h4 className="Main__h4" id={generateID("TDreamtime")}>
+                Dreamtime
+              </h4>
+              <Quote
+                quote={{
+                  en: {
+                    content: `Sapiens rule the world because only they can weave an intersubjective web of meaning.`,
+                    local: { p: 175, r: 14 }
+                  }
+                }}
+                mainLang={mainLang}
+              />
+              <h3
+                className="Main__h3"
+                id={generateID("Ch6. The Modern Covenant")}
+              >
+                Ch6. The Modern Covenant
+              </h3>
+              <h4 className="Main__h4" id={generateID("The Ark Syndrome")}>
+                The Ark Syndrome
+              </h4>
+              <Quote
+                quote={{
+                  en: {
+                    content: `There is no justice in history. When disaster strikes, the poor almost always suffer far more than the rich, even if the rich caused the tragedy in the first place. ... Paradoxically, the very power of science may increase the danger, because it makes the rich complacent.`,
+                    local: { p: 251, r: 9 }
+                  }
+                }}
+                mainLang={mainLang}
+              />
             </div>
           </section>
         </div>
