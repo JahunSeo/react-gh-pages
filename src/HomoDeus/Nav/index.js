@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./index.scss";
 
+import generateID from "../../Util/IDgenerator";
+
 export const NavList = props => {
   return <ul className="NavList">{props.children}</ul>;
 };
@@ -10,7 +12,11 @@ export class NavItem extends Component {
     let { item } = this.props;
     return (
       <li className="NavItem">
-        {item.title && <a className="NavItem__a">{item.title}</a>}
+        {item.title && (
+          <a className="NavItem__a" href={`#${generateID(item.title)}`}>
+            {item.title}
+          </a>
+        )}
         {item.sub && (
           <NavList>
             {item.sub.map((subItem, index) => {

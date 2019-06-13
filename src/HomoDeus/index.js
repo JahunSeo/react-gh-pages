@@ -3,6 +3,7 @@ import "./index.scss";
 
 import Quote from "./Quote";
 import { NavList, NavItem } from "./Nav";
+import generateID from "../Util/IDgenerator";
 
 export default class HomoDeus extends Component {
   state = {
@@ -78,9 +79,18 @@ export default class HomoDeus extends Component {
           </section>
           <section className="section section--main">
             <div className="Main">
-              <h1 className="Main__h1">HomoDeus</h1>
-              <h3 className="Main__h3">Ch1. The New Human Agenda</h3>
-              <h4 className="Main__h4">A Gun in Act 1</h4>
+              <h1 className="Main__h1" id={generateID("HomoDeus")}>
+                HomoDeus
+              </h1>
+              <h3
+                className="Main__h3"
+                id={generateID("Ch1. The New Human Agenda")}
+              >
+                Ch1. The New Human Agenda
+              </h3>
+              <h4 className="Main__h4" id={generateID("A Gun in Act 1")}>
+                A Gun in Act 1
+              </h4>
               <Quote
                 quote={{
                   en: {
