@@ -1,0 +1,15 @@
+.NavList {
+  border: 1px solid red;
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.NavItem {
+  margin: 0;
+  .NavItem__a {
+    margin-top: 10px;
+  }
+}

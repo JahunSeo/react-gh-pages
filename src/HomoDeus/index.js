@@ -2,22 +2,7 @@ import React, { Component } from "react";
 import "./index.scss";
 
 import Quote from "./Quote";
-
-const NavItem = props => {
-  let { item } = props;
-  return (
-    <li className="NavItem">
-      {item.title && <a className="NavItem__a">{item.title}</a>}
-      {item.sub && (
-        <ul className="NavList">
-          {item.sub.map((subItem, index) => {
-            return <NavItem item={subItem} key={index} />;
-          })}
-        </ul>
-      )}
-    </li>
-  );
-};
+import { NavList, NavItem } from "./Nav";
 
 export default class HomoDeus extends Component {
   state = {
@@ -44,7 +29,11 @@ export default class HomoDeus extends Component {
             title: "PART 1",
             sub: [
               {
-                title: "ch2",
+                title: "Ch2.",
+                sub: []
+              },
+              {
+                title: "Ch3.",
                 sub: []
               }
             ]
@@ -58,13 +47,13 @@ export default class HomoDeus extends Component {
         <div className="Page__inner">
           <section className="section section--nav">
             <nav className="Nav">
-              <ul className="NavList">
+              <NavList>
                 {navArray.map((item, index) => {
                   return <NavItem key={index} item={item} />;
                 })}
-              </ul>
+              </NavList>
 
-              <ul className="NavList">
+              {/* <ul className="NavList">
                 <li className="NavItem">
                   <a className="NavItem__a">HomoDeus</a>
                   <ul className="NavList">
@@ -84,7 +73,7 @@ export default class HomoDeus extends Component {
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ul> */}
             </nav>
           </section>
           <section className="section section--main">
