@@ -1,15 +1,22 @@
 .NavList {
-  border: 1px solid red;
   text-align: left;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 15px;
+  padding-left: 5px;
+  color: #000000;
+  margin-bottom: 5px;
+  border-left: 2px dotted green;
+  border-bottom: 1px dotted green;
 }
 
 .NavItem {
   margin: 0;
   .NavItem__a {
     margin-top: 10px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
   }
 }

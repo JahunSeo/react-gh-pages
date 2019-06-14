@@ -30,12 +30,8 @@ export default class HomoDeus extends Component {
             title: "PART 1",
             sub: [
               {
-                title: "Ch2.",
-                sub: []
-              },
-              {
-                title: "Ch3.",
-                sub: []
+                title: "Ch3. The Human Spark",
+                sub: [{ title: "Dreamtime" }]
               }
             ]
           }
@@ -53,28 +49,6 @@ export default class HomoDeus extends Component {
                   return <NavItem key={index} item={item} />;
                 })}
               </NavList>
-
-              {/* <ul className="NavList">
-                <li className="NavItem">
-                  <a className="NavItem__a">HomoDeus</a>
-                  <ul className="NavList">
-                    <li className="NavItem">
-                      <ul className="NavList">
-                        <li className="NavItem">
-                          <a className="NavItem__a">
-                            Ch1. The New Human Agenda
-                          </a>
-                          <ul className="NavList">
-                            <li className="NavItem">
-                              <a className="NavItem__a">A Gun in Act 1</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul> */}
             </nav>
           </section>
           <section className="section section--main">
@@ -112,7 +86,7 @@ export default class HomoDeus extends Component {
               <h3 className="Main__h3" id={generateID("Ch3. The Human Spark")}>
                 Ch3. The Human Spark
               </h3>
-              <h4 className="Main__h4" id={generateID("TDreamtime")}>
+              <h4 className="Main__h4" id={generateID("Dreamtime")}>
                 Dreamtime
               </h4>
               <Quote
@@ -138,6 +112,19 @@ export default class HomoDeus extends Component {
                   en: {
                     content: `There is no justice in history. When disaster strikes, the poor almost always suffer far more than the rich, even if the rich caused the tragedy in the first place. ... Paradoxically, the very power of science may increase the danger, because it makes the rich complacent.`,
                     local: { p: 251, r: 9 }
+                  }
+                }}
+                mainLang={mainLang}
+              />
+              <h2>Not yet located</h2>
+              <h4 className="Main__h4" id={generateID("Upgrading Inequality")}>
+                Upgrading Inequality
+              </h4>
+              <Quote
+                quote={{
+                  en: {
+                    content: `The same logic operates on election day, when the vote of the poor peasant counts for exactly the same as the billionaire's. The liberal solution for social inequality is to give equal value to different human experiences, instead of trying to create the same experiences for everyone. However, will this solution still work once rich and poor are separated not merely by wealth, but also by real biological gaps?`,
+                    local: { p: 404, r: 17 }
                   }
                 }}
                 mainLang={mainLang}
