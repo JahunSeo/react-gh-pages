@@ -11,21 +11,28 @@ export default class Quote extends Component {
 
   render() {
     let { quote, loc = {}, lang, className = "" } = this.props;
+    let otherLang = lang === "en" ? "ko" : "en";
 
     let quoteText = Locale[lang][quote.id];
     let locText = Locale[lang][quote.id + ".loc"];
     let substituted = false;
-    if (!quoteText) {
-      quoteText = quote[lang];
-      locText = loc[lang];
-    }
 
+    // check whether there is other option
     if (!quoteText) {
-      // if quote.id were suggested, the id will be shown.
-      let key = Object.keys(quote)[0];
-      quoteText = quote[key];
-      locText = loc[key];
+      quoteText = Locale[otherLang][quote.id];
+      locText = Locale[otherLang][quote.id + ".loc"];
       substituted = true;
+    }
+    // check whether inserted as inline object
+    if (!quoteText) {
+      if (quote[lang]) {
+        quoteText = quote[lang];
+        locText = loc[lang];
+      } else if (quote[otherLang]) {
+        quoteText = quote[otherLang];
+        locText = loc[otherLang];
+        substituted = true;
+      }
     }
 
     // final
@@ -41,10 +48,10 @@ export default class Quote extends Component {
     // let locText = `- ${100}쪽 ${23}줄`;
 
     return (
-      <div className="Quote">
-        <blockquote className="Item__quote">{quoteText}</blockquote>
-        <div className="Item__localRow">
-          <p className="Item__local">{locText}</p>
+      <div className={className}>
+        <blockquote className="content">{quoteText}</blockquote>
+        <div className="localRow">
+          <p className="local">{locText}</p>
         </div>
       </div>
     );

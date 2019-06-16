@@ -34,8 +34,6 @@ const en = {
   "p_r4.loc": `page 251, row 9`,
   p_r5: `The same logic operates on election day, when the vote of the poor peasant counts for exactly the same as the billionaire's. The liberal solution for social inequality is to give equal value to different human experiences, instead of trying to create the same experiences for everyone. However, will this solution still work once rich and poor are separated not merely by wealth, but also by real biological gaps?`,
   "p_r5.loc": `page 404, row 17`
-
-  // local
 };
 
 export default en;
