@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import "./index.scss";
 
+import TextTag from "./TextTag";
 import Quote from "./Quote";
 import { NavList, NavItem } from "./Nav";
-import generateID from "../Util/IDgenerator";
 
 export default class HomoDeus extends Component {
   state = {
-    mainLang: "en"
+    mainLang: "ko"
+  };
+
+  handleLangBtn = () => {
+    this.setState(state => ({
+      mainLang: state.mainLang === "ko" ? "en" : "ko"
+    }));
   };
 
   render() {
@@ -15,23 +21,23 @@ export default class HomoDeus extends Component {
 
     let navArray = [
       {
-        title: "HomoDeus",
+        title: { en: "Homo Deus", ko: "호모 데우스" },
         sub: [
           {
             title: null,
             sub: [
               {
-                title: "Ch1. The New Human Agenda",
-                sub: [{ title: "A Gun in Act 1" }]
+                title: { en: "Ch1. The New Human Agenda", ko: "" },
+                sub: [{ title: { en: "A Gun in Act 1", ko: "" } }]
               }
             ]
           },
           {
-            title: "PART 1",
+            title: { en: "PART 1", ko: "" },
             sub: [
               {
-                title: "Ch3. The Human Spark",
-                sub: [{ title: "Dreamtime" }]
+                title: { en: "Ch3. The Human Spark", ko: "" },
+                sub: [{ title: { en: "Dreamtime", ko: "" } }]
               }
             ]
           }
@@ -46,25 +52,29 @@ export default class HomoDeus extends Component {
             <nav className="Nav">
               <NavList>
                 {navArray.map((item, index) => {
-                  return <NavItem key={index} item={item} />;
+                  return <NavItem key={index} item={item} lang={mainLang} />;
                 })}
               </NavList>
             </nav>
+            <button onClick={this.handleLangBtn}>ko/en</button>
           </section>
           <section className="section section--main">
             <div className="Main">
-              <h1 className="Main__h1" id={generateID("HomoDeus")}>
-                HomoDeus
-              </h1>
-              <h3
-                className="Main__h3"
-                id={generateID("Ch1. The New Human Agenda")}
-              >
-                Ch1. The New Human Agenda
-              </h3>
-              <h4 className="Main__h4" id={generateID("A Gun in Act 1")}>
-                A Gun in Act 1
-              </h4>
+              <TextTag
+                tag={"h1"}
+                locale={{ en: "Homo Deus", ko: "호모 데우스" }}
+                lang={mainLang}
+              />
+              <TextTag
+                tag={"h3"}
+                locale={{ en: "Ch1. The New Human Agenda", ko: "" }}
+                lang={mainLang}
+              />
+              <TextTag
+                tag={"h4"}
+                locale={{ en: "A Gun in Act 1", ko: "" }}
+                lang={mainLang}
+              />
               <Quote
                 quote={{
                   en: {
@@ -83,12 +93,16 @@ export default class HomoDeus extends Component {
                 }}
                 mainLang={mainLang}
               />
-              <h3 className="Main__h3" id={generateID("Ch3. The Human Spark")}>
-                Ch3. The Human Spark
-              </h3>
-              <h4 className="Main__h4" id={generateID("Dreamtime")}>
-                Dreamtime
-              </h4>
+              <TextTag
+                tag={"h3"}
+                locale={{ en: "Ch3. The Human Spark", ko: "" }}
+                lang={mainLang}
+              />
+              <TextTag
+                tag={"h4"}
+                locale={{ en: "Dreamtime", ko: "" }}
+                lang={mainLang}
+              />
               <Quote
                 quote={{
                   en: {
@@ -98,15 +112,18 @@ export default class HomoDeus extends Component {
                 }}
                 mainLang={mainLang}
               />
-              <h3
-                className="Main__h3"
-                id={generateID("Ch6. The Modern Covenant")}
-              >
-                Ch6. The Modern Covenant
-              </h3>
-              <h4 className="Main__h4" id={generateID("The Ark Syndrome")}>
-                The Ark Syndrome
-              </h4>
+
+              <TextTag
+                tag={"h3"}
+                locale={{ en: "Ch6. The Modern Covenant", ko: "" }}
+                lang={mainLang}
+              />
+              <TextTag
+                tag={"h4"}
+                locale={{ en: "The Ark Syndrome", ko: "" }}
+                lang={mainLang}
+              />
+
               <Quote
                 quote={{
                   en: {
@@ -117,9 +134,12 @@ export default class HomoDeus extends Component {
                 mainLang={mainLang}
               />
               <h2>Not yet located</h2>
-              <h4 className="Main__h4" id={generateID("Upgrading Inequality")}>
-                Upgrading Inequality
-              </h4>
+
+              <TextTag
+                tag={"h4"}
+                locale={{ en: "Upgrading Inequality", ko: "" }}
+                lang={mainLang}
+              />
               <Quote
                 quote={{
                   en: {

@@ -9,12 +9,26 @@ export const NavList = props => {
 
 export class NavItem extends Component {
   render() {
-    let { item } = this.props;
+    let { item, lang } = this.props;
+
+    let titleStr;
+    if (item.title) {
+      let type = typeof item.title;
+      if (type === "string") {
+        titleStr = item.title;
+      } else if (type === "object") {
+        titleStr = item.title[lang];
+        if (!titleStr) {
+          titleStr = item.title[Object.keys(item.title)[0]];
+        }
+      }
+    }
+
     return (
       <li className="NavItem">
-        {item.title && (
-          <a className="NavItem__a" href={`#${generateID(item.title)}`}>
-            {item.title}
+        {titleStr && (
+          <a className="NavItem__a" href={`#${generateID(titleStr)}`}>
+            {titleStr}
           </a>
         )}
         {item.sub && (
