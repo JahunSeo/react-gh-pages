@@ -49,13 +49,13 @@ export default class HomoDeus extends Component {
       <div className="Page--HomoDeus">
         <div className="Page__inner">
           <section className="section section--nav">
-            {/* <nav className="Nav">
+            <nav className="Nav">
               <NavList>
                 {navArray.map((item, index) => {
                   return <NavItem key={index} item={item} lang={mainLang} />;
                 })}
               </NavList>
-            </nav> */}
+            </nav>
             <button onClick={this.handleLangBtn}>ko/en</button>
             <p>{mainLang}</p>
           </section>
