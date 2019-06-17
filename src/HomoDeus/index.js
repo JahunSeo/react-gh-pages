@@ -61,7 +61,7 @@ export default class HomoDeus extends Component {
           </section>
           <section className="section section--main">
             <div className="Main">
-              {/* <TextTag tag={"h1"} content={{ id: "h1" }} lang={mainLang} /> */}
+              <TextTag tag={"h1"} content={{ id: "h1" }} lang={mainLang} />
               {/* ch1 */}
               {/* <TextTag tag={"h3"} content={{ id: "h3_1" }} lang={mainLang} />
               <TextTag tag={"h4"} content={{ id: "h4_r1" }} lang={mainLang} />
