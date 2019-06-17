@@ -49,44 +49,43 @@ export default class HomoDeus extends Component {
       <div className="Page--HomoDeus">
         <div className="Page__inner">
           <section className="section section--nav">
-            <nav className="Nav">
+            {/* <nav className="Nav">
               <NavList>
                 {navArray.map((item, index) => {
                   return <NavItem key={index} item={item} lang={mainLang} />;
                 })}
               </NavList>
-            </nav>
+            </nav> */}
             <button onClick={this.handleLangBtn}>ko/en</button>
             <p>{mainLang}</p>
           </section>
           <section className="section section--main">
             <div className="Main">
-              <TextTag tag={"h1"} content={{ id: "h1" }} lang={mainLang} />
+              {/* <TextTag tag={"h1"} content={{ id: "h1" }} lang={mainLang} /> */}
               {/* ch1 */}
-              <TextTag tag={"h3"} content={{ id: "h3_1" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_1" }} lang={mainLang} />
               <TextTag tag={"h4"} content={{ id: "h4_r1" }} lang={mainLang} />
               <Quote quote={{ id: "p_r1" }} lang={mainLang} />
-              <Quote quote={{ id: "p_r2" }} lang={mainLang} />
+              <Quote quote={{ id: "p_r2" }} lang={mainLang} /> */}
               {/* ch2 */}
-              <TextTag tag={"h3"} content={{ id: "h3_2" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_2" }} lang={mainLang} /> */}
               {/* ch3 */}
-              <TextTag tag={"h3"} content={{ id: "h3_3" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_3" }} lang={mainLang} />
               <TextTag tag={"h4"} content={{ id: "h4_r2" }} lang={mainLang} />
-              <Quote quote={{ id: "p_r3" }} lang={mainLang} />
+              <Quote quote={{ id: "p_r3" }} lang={mainLang} /> */}
               {/* ch4 */}
-              <TextTag tag={"h3"} content={{ id: "h3_4" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_4" }} lang={mainLang} />
               <TextTag tag={"h4"} content={{ id: "h4_r6" }} lang={mainLang} />
               <Quote quote={{ id: "p_r13" }} lang={mainLang} />
-
               <TextTag tag={"h4"} content={{ id: "h4_r5" }} lang={mainLang} />
               <Quote quote={{ id: "p_r14" }} lang={mainLang} />
               <Quote quote={{ id: "p_r28" }} lang={mainLang} />
               <Quote quote={{ id: "p_r15" }} lang={mainLang} />
               <Quote quote={{ id: "p_r16" }} lang={mainLang} />
               <Quote quote={{ id: "p_r29" }} lang={mainLang} />
-
+ */}
               {/* ch5 */}
-              <TextTag tag={"h3"} content={{ id: "h3_5" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_5" }} lang={mainLang} />
               <TextTag tag={"h4"} content={{ id: "h4_r8" }} lang={mainLang} />
               <Quote quote={{ id: "p_r17" }} lang={mainLang} />
               <Quote quote={{ id: "p_r31" }} lang={mainLang} />
@@ -99,9 +98,9 @@ export default class HomoDeus extends Component {
               <Quote quote={{ id: "p_r20" }} lang={mainLang} />
               <Quote quote={{ id: "p_r21" }} lang={mainLang} />
               <Quote quote={{ id: "p_r30" }} lang={mainLang} />
-
+ */}
               {/* ch6 */}
-              <TextTag tag={"h3"} content={{ id: "h3_6" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_6" }} lang={mainLang} />
               <Quote quote={{ id: "p_r22" }} lang={mainLang} />
               <Quote quote={{ id: "p_r23" }} lang={mainLang} />
               <Quote quote={{ id: "p_r25" }} lang={mainLang} />
@@ -109,20 +108,20 @@ export default class HomoDeus extends Component {
               <Quote quote={{ id: "p_r27" }} lang={mainLang} />
               <Quote quote={{ id: "p_r24" }} lang={mainLang} />
               <TextTag tag={"h4"} content={{ id: "h4_r3" }} lang={mainLang} />
-              <Quote quote={{ id: "p_r4" }} lang={mainLang} />
+              <Quote quote={{ id: "p_r4" }} lang={mainLang} /> */}
               {/* ch7 */}
-              <TextTag tag={"h3"} content={{ id: "h3_7" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_7" }} lang={mainLang} /> */}
               {/* ch8 */}
-              <TextTag tag={"h3"} content={{ id: "h3_8" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_8" }} lang={mainLang} /> */}
               {/* ch9 */}
-              <TextTag tag={"h3"} content={{ id: "h3_9" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_9" }} lang={mainLang} /> */}
               {/* ch10 */}
-              <TextTag tag={"h3"} content={{ id: "h3_10" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_10" }} lang={mainLang} /> */}
               {/* ch11 */}
-              <TextTag tag={"h3"} content={{ id: "h3_11" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h3_11" }} lang={mainLang} /> */}
 
               <h2>Not yet located</h2>
-              <TextTag tag={"h3"} content={{ id: "h4_r4" }} lang={mainLang} />
+              {/* <TextTag tag={"h3"} content={{ id: "h4_r4" }} lang={mainLang} />
               <Quote quote={{ id: "p_r5" }} lang={mainLang} />
               <Quote quote={{ id: "p_r6" }} lang={mainLang} />
               <Quote quote={{ id: "p_r7" }} lang={mainLang} />
@@ -130,7 +129,7 @@ export default class HomoDeus extends Component {
               <Quote quote={{ id: "p_r9" }} lang={mainLang} />
               <Quote quote={{ id: "p_r10" }} lang={mainLang} />
               <Quote quote={{ id: "p_r11" }} lang={mainLang} />
-              <Quote quote={{ id: "p_r12" }} lang={mainLang} />
+              <Quote quote={{ id: "p_r12" }} lang={mainLang} /> */}
             </div>
           </section>
         </div>
