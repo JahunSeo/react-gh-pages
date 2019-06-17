@@ -63,10 +63,10 @@ export default class HomoDeus extends Component {
             <div className="Main">
               <TextTag tag={"h1"} content={{ id: "h1" }} lang={mainLang} />
               {/* ch1 */}
-              {/* <TextTag tag={"h3"} content={{ id: "h3_1" }} lang={mainLang} />
+              <TextTag tag={"h3"} content={{ id: "h3_1" }} lang={mainLang} />
               <TextTag tag={"h4"} content={{ id: "h4_r1" }} lang={mainLang} />
               <Quote quote={{ id: "p_r1" }} lang={mainLang} />
-              <Quote quote={{ id: "p_r2" }} lang={mainLang} /> */}
+              <Quote quote={{ id: "p_r2" }} lang={mainLang} />
               {/* ch2 */}
               {/* <TextTag tag={"h3"} content={{ id: "h3_2" }} lang={mainLang} /> */}
               {/* ch3 */}
